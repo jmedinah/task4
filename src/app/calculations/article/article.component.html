@@ -1,0 +1,25 @@
+<div class="row">
+  <div class="row">
+    <label for="">Article</label>
+    <input type="text" placeholder="Article name" #article>
+  </div>
+  <div class="row">
+    <label for="">Value</label>
+    <input type="number" placeholder="$ 0000" [(ngModel)]="value">
+  </div>
+  <div>
+    <button (click)="calculate(value,vat)">Calculate </button>
+  </div>
+  <div>
+  <div class="row">
+    The tesla costs {{ value | currency:'USD':true:'1.0'}}
+  </div>
+  <div class="row">
+    The Vat is {{iva | currency:'USD':true:'1.0'}}
+  </div>
+   <div class="row">
+    The total is {{total | currency:'USD':true:'1.0'}}
+  </div> 
+</div>
+
+</div>
